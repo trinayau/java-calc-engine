@@ -5,7 +5,7 @@ public class Main {
         char[] opCodes = {'d', 'a', 's', 'm'};
         double[] results = new double[opCodes.length];
 
-        if (arg.length == 0) {
+        if (args.length == 0) {
 
             for (int i = 0; i < opCodes.length; i++) {
                 results[i] = execute(opCodes[i], leftVals[i], rightVals[i]);
