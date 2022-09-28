@@ -51,4 +51,24 @@ public class Main {
         }
         return result;
     }
+
+    static char opCodeFromString(string operationName) {
+        char opCode = operationName.charAt(0);
+        return opCode;
+    }
+
+    double valueFromWord(String word) {
+        String[] numberWords = {
+                "zero", "one", "two", "three", "four", "five", "six", "seven"
+                "eight", "nine"
+        };
+        double value = 0d;
+        for (int index = 0; index < numberWords.length; index++) {
+            if(word.equals(numberWords[index])){
+                value=index;
+                break;
+            }
+        }
+        return value;
+    }
 }
