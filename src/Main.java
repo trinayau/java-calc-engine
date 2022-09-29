@@ -26,7 +26,10 @@ public class Main {
     }
 
     static void executeInteractively() {
-        System.out.println("Enter an operation and two numbers:");
+        System.out.println("Enter an operation and two numbers (in words) in this format:");
+        System.out.println("operation number1 number2");
+        System.out.println("e.g.: multiply two five ");
+        System.out.println("Operations available: add substract multiply divide");
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         String[] parts = userInput.split(" ");
