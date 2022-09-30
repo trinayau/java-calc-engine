@@ -31,7 +31,7 @@ public class Main {
         System.out.println("operation number1 number2");
         System.out.println("e.g.: multiply two five ");
         System.out.println("Operations available: add, substract, multiply, divide");
-        System.out.println("Date operations also available: e.g. when YYYY-MM-DD number of days to add (in words)");
+        System.out.println("Date operations also available: e.g. when YYYY-MM-DD number of days to add" );
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         String[] parts = userInput.split(" ");
@@ -129,13 +129,17 @@ public class Main {
                 "zero", "one", "two", "three", "four", "five", "six", "seven",
                 "eight", "nine"
         };
-        double value = 0d;
+        double value = -1d; //default invalid, if it stays -1 after for loop means nothing was matched
         for (int index = 0; index < numberWords.length; index++) {
             if(word.equals(numberWords[index])){
                 value=index;
                 break;
             }
         }
+
+        if(value == -1d)
+            value = Double.parseDouble(word);
+
         return value;
     }
 }
